@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dish n' Beats — A podcast and event series about DJ culture, food, and community." />
+  <title>Dish n' Beats</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #555555;
+      --footer: #777777;
+      --max-width: 720px;
+      --padding: 24px;
+      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-stack);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: var(--padding);
+    }
+
+    .page {
+      width: 100%;
+      max-width: var(--max-width);
+      text-align: center;
+      opacity: 0;
+      transform: translateY(8px);
+      animation: fadeInUp 900ms ease-out forwards;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(2.25rem, 5vw, 4rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+    }
+
+    p.description {
+      margin: 0 auto;
+      max-width: 34rem;
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 56px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--footer);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .page {
+        opacity: 1;
+        transform: none;
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <h1>Dish n' Beats</h1>
+    <p class="description">A podcast and event series about DJ culture, food, and community — coming soon.</p>
+
+    <footer>
+      © 2026 Dish n’ Beats, All Rights Reserved<br />
+      Made with ♥️ in Austin, Texas
+    </footer>
+  </main>
+</body>
+</html>
