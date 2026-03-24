@@ -304,6 +304,25 @@
       font-size: 1.02rem;
     }
 
+    .inline-link {
+      color: #e6ff9d;
+      text-decoration: underline;
+      text-decoration-color: rgba(199, 255, 42, 0.5);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.14em;
+      font-weight: 600;
+      transition:
+        color var(--transition),
+        text-decoration-color var(--transition);
+    }
+
+    .inline-link:hover,
+    .inline-link:focus-visible {
+      color: #f5ffd1;
+      text-decoration-color: rgba(199, 255, 42, 0.9);
+      outline: none;
+    }
+
     .event-time {
       margin: 12px 0 0;
       font-family: "Space Grotesk", sans-serif;
@@ -661,10 +680,10 @@
 
       <section class="event-card" aria-label="Inaugural event details">
         <p class="event-kicker">Inaugural Event</p>
-        <h2 class="event-title">SIGIL ZERO Records Launch Party x Dish n' BEATS</h2>
+        <h2 class="event-title">SIGIL.ZERO Records Launch Party x Dish n' BEATS</h2>
         <p class="event-time">Sunday, Mar 29, 11:15am - 4:45pm</p>
         <p class="event-copy">
-          Let's celebrate. SIGIL ZERO Records is having its launch party, and we are stepping boldly into the future with Dish n' BEATS.
+          Let's celebrate. <a class="inline-link" href="https://sigilzero.com" target="_blank" rel="noopener noreferrer">SIGIL ZERO Records</a> is having its launch party, and we are stepping boldly into the future with Dish n' BEATS.
         </p>
         <p class="event-copy">
           Join us for the afternoon, where DJs and friends can connect. We'll spotlight new releases and rising Dish n' BEATS DJ community vibes, spin on open decks, and BBQ!
