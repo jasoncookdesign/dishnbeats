@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Dish n' Beats — a podcast and event series about DJ culture, food, and community."
+    content="Dish n' BEATS — a podcast and event series about DJ culture, food, and community."
   />
   <meta name="theme-color" content="#0F1113" />
 
-  <meta property="og:title" content="Dish n' Beats" />
+  <meta property="og:title" content="Dish n' BEATS" />
   <meta
     property="og:description"
     content="A podcast and event series about DJ culture, food, and community."
@@ -17,7 +17,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dishnbeats.com" />
 
-  <title>Dish n' Beats</title>
+  <title>Dish n' BEATS</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -264,6 +264,137 @@
       color: var(--muted);
     }
 
+    .event-card {
+      position: relative;
+      z-index: 1;
+      margin: 0 56px 30px;
+      padding: 26px 26px 24px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(199, 255, 42, 0.22);
+      background:
+        linear-gradient(180deg, rgba(31, 37, 23, 0.62) 0%, rgba(20, 24, 28, 0.9) 100%);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.03),
+        0 16px 30px rgba(0, 0, 0, 0.24),
+        0 0 30px rgba(199, 255, 42, 0.06);
+    }
+
+    .event-kicker {
+      margin: 0;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #d9ff7d;
+      font-weight: 600;
+    }
+
+    .event-title {
+      margin: 8px 0 0;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.45rem, 3.2vw, 2rem);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--cream);
+    }
+
+    .event-copy {
+      margin: 14px 0 0;
+      color: var(--cream-soft);
+      line-height: 1.74;
+      font-size: 1.02rem;
+    }
+
+    .event-time {
+      margin: 12px 0 0;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.01em;
+      color: #eef5c6;
+    }
+
+    .event-shout {
+      margin: 16px 0 0;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #f5ffca;
+    }
+
+    .tag-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .tag-item {
+      display: grid;
+      gap: 2px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(244, 241, 230, 0.14);
+      background: rgba(12, 14, 16, 0.3);
+      cursor: default;
+      -webkit-user-select: text;
+      user-select: text;
+    }
+
+    .tag-key {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(244, 241, 230, 0.58);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .tag-value {
+      font-size: 0.93rem;
+      line-height: 1.35;
+      color: var(--cream);
+      font-weight: 500;
+    }
+
+    .event-note {
+      margin: 16px 0 0;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: rgba(244, 241, 230, 0.68);
+    }
+
+    .event-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 18px;
+      min-height: 50px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(199, 255, 42, 0.45);
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #0f1113;
+      background: linear-gradient(135deg, #dcff8f 0%, #8fff5f 100%);
+      box-shadow: 0 10px 24px rgba(143, 255, 95, 0.22);
+      transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        filter var(--transition);
+    }
+
+    .event-cta:hover,
+    .event-cta:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 30px rgba(143, 255, 95, 0.32);
+      filter: saturate(1.05);
+      outline: none;
+    }
+
     .visual-wrap {
       display: flex;
       justify-content: center;
@@ -420,6 +551,10 @@
         padding: 36px 24px 24px;
       }
 
+      .event-card {
+        margin: 0 24px 24px;
+      }
+
       .visual-wrap {
         order: -1;
       }
@@ -452,6 +587,20 @@
         padding: 0 18px 18px;
       }
 
+      .event-card {
+        margin: 0 18px 18px;
+        padding: 20px 18px;
+      }
+
+      .tag-list {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .event-cta {
+        width: 100%;
+      }
+
       .footer {
         font-size: 0.9rem;
       }
@@ -476,16 +625,16 @@
 </head>
 <body>
   <main class="page">
-    <section class="frame" aria-label="Dish n' Beats placeholder site">
+    <section class="frame" aria-label="Dish n' BEATS placeholder site">
       <div class="hero">
         <div class="copy">
           <div class="eyebrow">
             <span class="eyebrow-dot" aria-hidden="true"></span>
-            Coming soon from Austin, TX
+            First event is live in Austin, TX
           </div>
 
           <h1>
-            <span class="brand-name">Dish n' Beats</span>
+            <span class="brand-name">Dish n' BEATS</span>
             <span class="headline-accent">event series and podcast</span>
           </h1>
 
@@ -494,7 +643,7 @@
           </p>
 
           <p class="microcopy">
-            Built by DJs. Made for curious listeners. A place for good music and good food where the underground comes together.
+            This is the inaugural Dish n' BEATS event, and we are not broadcasting yet. Pull up in person and help set the tone for what comes next.
           </p>
         </div>
 
@@ -502,7 +651,7 @@
           <div class="logo-wrap">
             <img
               src="logo.png"
-              alt="Dish n' Beats logo"
+              alt="Dish n' BEATS logo"
               width="1024"
               height="1024"
             />
@@ -510,7 +659,49 @@
         </div>
       </div>
 
-      <nav class="socials" id="links" aria-label="Dish n' Beats links">
+      <section class="event-card" aria-label="Inaugural event details">
+        <p class="event-kicker">Inaugural Event</p>
+        <h2 class="event-title">SIGIL ZERO Records Launch Party x Dish n' BEATS</h2>
+        <p class="event-time">Sunday, Mar 29, 11:15am - 4:45pm</p>
+        <p class="event-copy">
+          Let's celebrate. SIGIL ZERO Records is having its launch party, and we are stepping boldly into the future with Dish n' BEATS.
+        </p>
+        <p class="event-copy">
+          Join us for the afternoon, where DJs and friends can connect. We'll spotlight new releases and rising Dish n' BEATS DJ community vibes, spin on open decks, and BBQ!
+        </p>
+        <p class="event-shout">Open decks and free food.</p>
+        <ul class="tag-list" aria-label="Event details">
+          <li class="tag-item">
+            <span class="tag-key">Entry</span>
+            <span class="tag-value">Free event, no cover</span>
+          </li>
+          <li class="tag-item">
+            <span class="tag-key">Parking</span>
+            <span class="tag-value">Free street parking</span>
+          </li>
+          <li class="tag-item">
+            <span class="tag-key">Drinks</span>
+            <span class="tag-value">BYOB</span>
+          </li>
+          <li class="tag-item">
+            <span class="tag-key">Location</span>
+            <span class="tag-value">Georgetown, TX location — RSVP for details</span>
+          </li>
+        </ul>
+        <p class="event-copy">
+          This is a call to all DJs. Come feel the vibe, be part of the energy, and let's blast off into this next chapter.
+        </p>
+        <a
+          class="event-cta"
+          href="https://partiful.com/e/taxY0qIHudRjgAREBL4a"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          RSVP on Partiful
+        </a>
+      </section>
+
+      <nav class="socials" id="links" aria-label="Dish n' BEATS links">
         <a
           class="social-link"
           href="https://instagram.com/dishnbeats"
