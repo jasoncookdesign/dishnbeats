@@ -216,7 +216,8 @@
     }
 
     h1 .brand-name {
-      display: block;
+      display: inline-block;
+      margin-right: 0.18em;
       font-family: "Lobster", cursive;
       font-weight: 400;
       font-size: 1.05em;
@@ -230,8 +231,8 @@
     }
 
     .headline-accent {
-      display: block;
-      margin-top: 10px;
+      display: inline-block;
+      margin-top: 0;
       font-family: "Space Grotesk", sans-serif;
       font-weight: 700;
       text-transform: uppercase;
@@ -240,6 +241,18 @@
       -webkit-background-clip: text;
       background-clip: text;
       text-shadow: 0 0 24px rgba(69, 255, 115, 0.14);
+    }
+
+    .headline-diminished {
+      display: block;
+      margin-top: 12px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(0.85rem, 1.5vw, 1.15rem);
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(244, 241, 230, 0.78);
+      text-shadow: 0 0 14px rgba(69, 255, 115, 0.08);
     }
 
     .description {
@@ -649,12 +662,13 @@
         <div class="copy">
           <div class="eyebrow">
             <span class="eyebrow-dot" aria-hidden="true"></span>
-            First event is live in Austin, TX
+            First event!
           </div>
 
           <h1>
-            <span class="brand-name">Dish n' BEATS</span>
-            <span class="headline-accent">event series and podcast</span>
+            <span class="brand-name">Dish n'</span>
+            <span class="headline-accent">BEATS</span>
+            <span class="headline-diminished">Event series and podcast</span>
           </h1>
 
           <p class="description">
