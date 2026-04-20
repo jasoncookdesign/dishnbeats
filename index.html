@@ -426,6 +426,28 @@
       outline: none;
     }
 
+    .event-cta-disabled {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 18px;
+      min-height: 50px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      border: 1px solid #333333;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #0f1113;
+      background: #333333;
+      transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        filter var(--transition);
+      cursor: not-allowed;
+    }
+
     .visual-wrap {
       display: flex;
       justify-content: center;
@@ -724,9 +746,7 @@
           This is a call to all DJs. Come feel the vibe, be part of the energy, and let's blast off into this next chapter.
         </p>
         <a
-          class="event-cta"
-          href="https://partiful.com/e/EqZykWmzDPFP2J1QfIc3"
-          target="_blank"
+          class="event-cta-disabled"
           rel="noopener noreferrer"
         >
           RSVP on Partiful
